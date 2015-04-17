@@ -2,6 +2,7 @@ package mathclasses;
 
 public class FizzBizz {
 	public static void main(String[] args) {
+		System.out.println("This is the basic FizzBizz program.");
         for (int i = 1; i <= 100; i++) {
             boolean three = (i % 3 == 0);
             boolean five = (i % 5 == 0);
