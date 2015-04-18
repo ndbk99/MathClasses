@@ -12,6 +12,8 @@ public class EigenCalc {
     static double[] lambda = {0.0, 0.0};
     // a, b, c, d values for quadratic computations
     static double a, b, c, d;
+    // i or not?
+    static boolean i = false;
     
     public static void main(String args[]) {
         System.out.println("This program will find the eigenvalue(s) of a 2x2 matrix.");
@@ -49,6 +51,9 @@ public class EigenCalc {
         b = -(matrix[0][0] + matrix[1][1]);
         c = matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
         d = Math.pow(b,2) - (4*a*c);
+        if (d < 0) {
+        	i = true;
+        }
         // find and return lambda
         lambda[0] = formula(0) - formula(1);
         lambda[1] = formula(0) + formula(1);
