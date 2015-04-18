@@ -40,22 +40,28 @@ public class EigenCalc_Imaginary {
         b = -(matrix[0][0] + matrix[1][1]);
         c = matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
         // find and return lambda
-        lambda[0] = quadMinus();
-        lambda[1] = quadPlus();
+        //lambda[0] = quadMinus();
+        //lambda[1] = quadPlus();
         return lambda[n];
     }
     
     // + quadratic solution
-    public static double quadPlus() {
-        double p = (-b + Math.sqrt(Math.pow(b,2) - (4*a*c))) / (2*a);
+    public static double[] quadPlus() {
+    	double t1 = -b / (2*a);
+    	double t2 = Math.sqrt(Math.abs(Math.pow(b,2) - (4*a*c)));
+        double[] p = {t1, t2};
         return p;
     }
     
+    /*
     // - quadratic solution
-    public static double quadMinus() {
-        double m = (-b - Math.sqrt(Math.pow(b,2) - (4*a*c))) / (2*a);
-        return m;
+    public static double[] quadMinus() {
+    	double t1 = -b / (2*a);
+    	double t2 = Math.sqrt(Math.abs(Math.pow(b,2) - (4*a*c)));
+        double[] p = {t1, t2};
+        return {m,m};
     }
+    */
     
     // Find 0th or 1st eigenvector, returns component array
     public static double eigenvector(int n, int m) {
