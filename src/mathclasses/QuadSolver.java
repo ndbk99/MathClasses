@@ -23,7 +23,7 @@ public class QuadSolver {
         }
         else if (d == 0) { 
             // print 1 double real root
-            System.out.println(formula(0) + formula(1));
+            System.out.println(formula(0));
         }
         else { 
             // print 2 real roots
