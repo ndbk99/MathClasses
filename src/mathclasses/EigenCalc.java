@@ -34,24 +34,25 @@ public class EigenCalc {
         sc.close();
     }
     
-    // nth eigenvalue
-    public static double eigenvalue(int n) {
-        // find a, b, c of lambda quadratic
-        a = 1;
-        b = -(matrix[0][0] + matrix[1][1]);
-        c = matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
-        // find and return lambda
-        lambda[0] = formula(0) - formula(1);
-        lambda[1] = formula(0) + formula(1);
-        return lambda[n];
-    }
-    
     // nth part of quadratic solution
     public static double formula(int n) {
         double t1 = -b / (2*a);
         double t2 = (Math.sqrt(Math.abs(Math.pow(b,2) - (4*a*c)))) / (2*a);
         double[] r = {t1,t2};
         return r[n];
+    }
+    
+    // nth eigenvalue
+    public static double eigenvalue(int n) {
+        // find a, b, c of lambda quadratic
+        a = 1;
+        b = -(matrix[0][0] + matrix[1][1]);
+        c = matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
+        d = Math.pow(b,2) - (4*a*c);
+        // find and return lambda
+        lambda[0] = formula(0) - formula(1);
+        lambda[1] = formula(0) + formula(1);
+        return lambda[n];
     }
     
     // mth component of nth eigenvector
