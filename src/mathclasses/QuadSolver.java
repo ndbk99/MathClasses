@@ -19,7 +19,7 @@ public class QuadSolver {
         
         if (d < 0) { 
             // print 2 conjugate imaginary roots
-            System.out.println(formula(0) + " + " + formula(1) + "i, " + formula(0) + " - " + formula(1) + "i, ");
+            System.out.println(formula(0) + " + " + formula(1) + "i, " + formula(0) + " - " + formula(1) + "i, " + d);
         }
         else if (d == 0) { 
             // print 1 double real root

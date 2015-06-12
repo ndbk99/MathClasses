@@ -17,7 +17,6 @@ public class CellularAutomata {
 	static int columns = 50;
 	static int rows = 1;
 	
-	static int[] firstRow = new int[columns];
 	
 	static int[][] rowArray = new int[columns][rows];
 	
@@ -26,19 +25,20 @@ public class CellularAutomata {
 		Scanner sc = new Scanner(System.in);
 		rows = sc.nextInt();
 		
+		// initialize
 		for (int i = 0; i < columns; i++) {
 			if (i == Math.round(columns/2)) {
 				System.out.print("X");
-				firstRow[i] = 1;
+				rowArray[0][i] = 1;
 			} else { 
 				System.out.print("-");
-				firstRow[i] = 0;				
+				rowArray[0][i] = 0;
 			}
 		}
 		
 		for (int r = 0; r < rows; r++) {
 			for (int c = 0; c < columns; c++) {
-				int[] neighborhood = {0,0,0};
+				// int[] neighborhood = {0,0,0};
 			}
 		}
 		

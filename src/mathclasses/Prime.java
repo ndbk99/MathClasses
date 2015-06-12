@@ -10,7 +10,7 @@ public class Prime {
         System.out.print(n);
         
         if (prime(n)) { System.out.println(" is prime"); }
-        else { System.out.println(" is composite. Factors are... "); }
+        else { System.out.println(" is composite."); }
         
         sc.close();
 	}
